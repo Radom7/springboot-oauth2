@@ -1,5 +1,5 @@
 # springboot-oauth2
-##主要maven依赖
+## 主要maven依赖
 ```
 <!-- 注意是starter,自动配置 -->
 <dependency>
@@ -19,7 +19,7 @@
 </dependency>
 ```
 
-##访问 
+## 访问 
 password模式：
 ```
 http://localhost:8080/oauth/token?username=user_1&password=123456&grant_type=password&scope=select&client_id=client_2&client_secret=123456
