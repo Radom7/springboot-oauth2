@@ -85,9 +85,9 @@ public class OAuth2ServerConfig {
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
             endpoints
+                    .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)// add get method
                     .tokenStore(new RedisTokenStore(redisConnectionFactory))
-                    .authenticationManager(authenticationManager)
-                    .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);// add get method
+                    .authenticationManager(authenticationManager);
         }
 
         @Override
